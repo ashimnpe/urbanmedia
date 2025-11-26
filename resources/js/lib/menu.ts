@@ -10,7 +10,7 @@ export const footerNavItems: NavItem[] = [
     },
     {
         title: 'Website',
-        href: 'https://mnmedia.com.np/',
+        href: 'https://urbanmedia.com.np/',
         icon: Globe,
         target: '_blank'
     },
