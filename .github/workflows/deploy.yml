@@ -26,14 +26,14 @@ jobs:
           extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom, filter, gd, iconv, json, mbstring, pdo
           tools: composer:v2
 
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
       # (Optional) If you need to build your project before deploying
       - name: Install dependencies
         run: |
           npm install   # or composer install for Laravel
           npm run build # or skip if not required
-
-      - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
 
       - name: Upload files to cPanel via SCP
         uses: appleboy/scp-action@v0.1.7
