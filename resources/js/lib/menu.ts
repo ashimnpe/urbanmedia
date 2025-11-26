@@ -1,5 +1,5 @@
 import { NavItem } from '@/types';
-import {Contact, Globe, LayoutGrid, MessageCircleMore, Trash, User, User2 } from 'lucide-react';
+import {Contact, Globe, LayoutGrid, MessageSquare, Trash, User, Users } from 'lucide-react';
 
 export const footerNavItems: NavItem[] = [
     {
@@ -25,7 +25,7 @@ export const mainNavItems: NavItem[] = [
     {
         title: 'Testimonials',
         href: '/admin/testimonials',
-        icon: MessageCircleMore,
+        icon: MessageSquare,
     },
     {
         title: 'Contact',
@@ -35,7 +35,7 @@ export const mainNavItems: NavItem[] = [
     {
         title: 'Clients',
         href: '/admin/clients',
-        icon: User2,
+        icon: Users,
     },
     {
         title: 'Users',

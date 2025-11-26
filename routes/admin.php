@@ -2,10 +2,6 @@
 
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\ContactController;
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\NoticeController;
-use App\Http\Controllers\Admin\PortfolioController;
-use App\Http\Controllers\Admin\TeamController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\TrashController;
 use App\Http\Controllers\Admin\UserController;
@@ -15,8 +11,6 @@ use Inertia\Inertia;
 Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::prefix('admin')->group(function () {
-
-        // Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         // Clients
         Route::get('/clients', [ClientController::class, 'index'])->name('client.index');
