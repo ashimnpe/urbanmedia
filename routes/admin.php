@@ -33,10 +33,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
         // Testimonials
-        // Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonial.index');
-        // Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('testimonials.store');
-        // Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
-        // Route::delete('/testimonials/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonials.delete');
+        Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonial.index');
+        Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('testimonials.store');
+        Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('testimonials.update');
+        Route::delete('/testimonials/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonials.delete');
 
         // // User
         Route::get('/users', [UserController::class, 'index'])->name('user.index');
