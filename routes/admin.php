@@ -39,10 +39,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // Route::delete('/testimonials/delete/{id}', [TestimonialController::class, 'destroy'])->name('testimonials.delete');
 
         // // User
-        // Route::get('/users', [UserController::class, 'index'])->name('user.index');
-        // Route::post('/users/store', [UserController::class, 'store'])->name('user.store');
-        // Route::post('/users/update/{id}', [UserController::class, 'update'])->name('user.update');
-        // Route::delete('/users/delete/{id}', [UserController::class, 'destroy'])->name('user.delete');
+        Route::get('/users', [UserController::class, 'index'])->name('user.index');
+        Route::post('/users/store', [UserController::class, 'store'])->name('user.store');
+        Route::post('/users/update/{id}', [UserController::class, 'update'])->name('user.update');
+        Route::delete('/users/delete/{id}', [UserController::class, 'destroy'])->name('user.delete');
 
         // // Notice
         // Route::get('/notices', [NoticeController::class, 'index'])->name('notice.index');
