@@ -187,6 +187,13 @@ p {
     color: #b01116;
 }
 
+.section_title .sub_main_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    color: #00abbd;
+}
+
 @media (max-width: 767px) {
     .section_title .sub_title {
         font-size: 16px;
@@ -1826,7 +1833,7 @@ p.form-message.error.form-message.error {
 }
 
 .footer_link .link li a:hover {
-    color: #b01116;
+    color: #00abbd;
 }
 
 .subscribe_form {

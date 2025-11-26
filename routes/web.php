@@ -17,6 +17,7 @@ Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about');
 Route::get('/our-services', [PageController::class, 'getService'])->name('services');
 Route::get('/our-projects', [PageController::class, 'getProject'])->name('projects');
 Route::get('/contact-us', [PageController::class, 'getContact'])->name('contact');
+Route::get('/our-clients', [PageController::class, 'getClient'])->name('clients');
 
 
 Route::middleware(['auth', 'verified'])->group(function () {

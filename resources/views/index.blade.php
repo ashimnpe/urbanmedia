@@ -359,8 +359,7 @@
                         <div class="section_title pb-15">
                             <h5 class="sub_title">Contact</h5>
                             <h4 class="main_title">Get In Touch</h4>
-                            <p>Lorem ipsum dolor sitrg amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna.</p>
+                            <p>Ready to start your project? Fill out the form below to connect with our team.</p>
                         </div> <!-- section title -->
 
                         <div class="contact_form">
@@ -369,31 +368,31 @@
                                     <div class="col-md-6">
                                         <div class="single_form">
                                             <input name="name" type="text" placeholder="Name">
-                                        </div> <!-- single form -->
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_form">
                                             <input name="email" type="email" placeholder="Email">
-                                        </div> <!-- single form -->
+                                        </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single_form">
                                             <textarea name="message" placeholder="Message"></textarea>
-                                        </div> <!-- single form -->
+                                        </div>
                                     </div>
                                     <p class="form-message"></p>
                                     <div class="col-md-12">
                                         <div class="single_form">
                                             <button class="main-btn">Submit</button>
-                                        </div> <!-- single form -->
+                                        </div>
                                     </div>
-                                </div> <!-- row -->
+                                </div>
                             </form>
-                        </div> <!-- contact form -->
-                    </div> <!-- contact wrapper -->
+                        </div>
+                    </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+            </div>
+        </div>
     </section>
 
 @endsection

@@ -31,4 +31,11 @@ class PageController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function getClient()
+    {
+        return view('pages.client');
+    }
+
+
 }

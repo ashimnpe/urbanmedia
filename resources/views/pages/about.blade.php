@@ -37,7 +37,8 @@
                 <div class="col-lg-6">
                     <div class="section_title text-center pb-25">
                         <h5 class="sub_title">About Us</h5>
-                        <h4 class="main_title">Urbans Media Pvt. Ltd.</h4>
+                        <h4 class="main_title">Urban Media Pvt. Ltd.</h4>
+                        <p class="sub_main_title">Regd. No.: 371916/82/83 </p>
                         <p class="mt-3 text-justify">
                             We are a creative media agency dedicated to transforming ideas into impactful designs,
                             strategic branding, and effective marketing solutions.
@@ -59,7 +60,7 @@
                             results that matter.
                         </p>
                         <p class="text-justify">
-                            Based in Kathmandu, we have proudly supported startups, SMEs, corporations, and NGOs in shaping
+                            Based in Kathmandu, we have proudly supported startups, Banks, SMEs, corporations, and NGOs in shaping
                             their brand stories and strengthening their communication across various platforms.
                         </p>
                     </div>
