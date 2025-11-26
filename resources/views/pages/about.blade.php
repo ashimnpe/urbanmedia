@@ -39,7 +39,7 @@
                         <h5 class="sub_title">About Us</h5>
                         <h4 class="main_title">Urban Media Pvt. Ltd.</h4>
                         <p class="sub_main_title">Regd. No.: 371916/82/83 </p>
-                        <p class="mt-3 text-justify">
+                        <p class="mt-3 text-center">
                             We are a creative media agency dedicated to transforming ideas into impactful designs,
                             strategic branding, and effective marketing solutions.
                         </p>
