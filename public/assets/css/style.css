@@ -1955,3 +1955,14 @@ p.form-message.error.form-message.error {
     color: #fff;
     background-color: #b01116;
 }
+
+
+.bg-urban {
+    background-color: #00abbd;
+    color: #fff;
+}
+
+.bg-urban:hover {
+    background-color: #008c95;
+    color: #fff;
+}

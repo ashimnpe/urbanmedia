@@ -19,6 +19,8 @@ Route::get('/our-projects', [PageController::class, 'getProject'])->name('projec
 Route::get('/contact-us', [PageController::class, 'getContact'])->name('contact');
 Route::get('/our-clients', [PageController::class, 'getClient'])->name('clients');
 
+Route::post('/store-contact', [PageController::class, 'storeContact'])->name('store.contact');
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {

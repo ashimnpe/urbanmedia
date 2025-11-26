@@ -52,7 +52,7 @@
                                 premium printing, we bring your vision to life with style, speed, and precision.
                             </p>
                             <ul>
-                                <li class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.9s"><a class="main-btn"
+                                <li class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.9s"><a class="main-btn bg-urban"
                                         rel="nofollow" href="{{ route('contact') }}">Get Started</a></li>
                             </ul>
                         </div> <!-- header hero content -->
@@ -363,27 +363,36 @@
                         </div> <!-- section title -->
 
                         <div class="contact_form">
-                            <form id="contact-form" action="assets/contact.php">
+                            <form id="contact-form" action="{{ route('store.contact') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="single_form">
-                                            <input name="name" type="text" placeholder="Name">
+                                            <input name="name" type="text" placeholder="Name"
+                                                class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="single_form">
-                                            <input name="email" type="email" placeholder="Email">
+                                            <input name="phone" type="text" placeholder="phone"
+                                                class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="single_form">
-                                            <textarea name="message" placeholder="Message"></textarea>
+                                            <input name="email" type="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="single_form">
+                                            <textarea name="message" placeholder="Message" class="form-control" rows="5"></textarea>
                                         </div>
                                     </div>
                                     <p class="form-message"></p>
-                                    <div class="col-md-12">
+                                    <div class="col-12">
                                         <div class="single_form">
-                                            <button class="main-btn">Submit</button>
+                                            <button type="submit" class="main-btn btn btn-primary w-100">Submit</button>
                                         </div>
                                     </div>
                                 </div>

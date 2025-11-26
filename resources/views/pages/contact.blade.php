@@ -60,20 +60,26 @@
                         </div>
 
                         <div class="contact_form">
-                            <form id="contact-form" action="assets/contact.php">
+                            <form id="contact-form" action="{{ route('store.contact') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="single_form mb-3">
+                                        <div class="single_form">
                                             <input name="name" type="text" placeholder="Name" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="single_form mb-3">
+                                        <div class="single_form">
+                                            <input name="phone" type="text" placeholder="phone" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="single_form">
                                             <input name="email" type="email" placeholder="Email" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="single_form mb-3">
+                                        <div class="single_form">
                                             <textarea name="message" placeholder="Message" class="form-control" rows="5"></textarea>
                                         </div>
                                     </div>
