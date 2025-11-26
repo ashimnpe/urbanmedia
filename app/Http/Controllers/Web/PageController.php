@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Web\ContactRequest;
+use App\Models\Client;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -37,7 +38,10 @@ class PageController extends Controller
 
     public function getClient()
     {
-        return view('pages.client');
+        $clients = Client::with('media')->get();
+        return view('pages.client', [
+            'clients' => $clients,
+        ]);
     }
 
     public function storeContact(ContactRequest $request)

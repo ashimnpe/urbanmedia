@@ -48,18 +48,18 @@ class RolesPermissionSeeder extends Seeder
         $superadminRole->syncPermissions(Permission::all());
         $adminRole->syncPermissions([
             'view teams',
-            'view contacts',
-            'view testimonials',
-            'view users',
-            'view clients',
             'create teams',
             'edit teams',
-            'create clients',
             'delete teams',
-            'edit clients',
-            'delete testimonials',
+            'view contacts',
             'delete contacts',
+            'view testimonials',
+            'delete testimonials',
+            'view clients',
+            'create clients',
+            'edit clients',
             'delete clients',
+            'view users',
         ]);
 
         $userRole->syncPermissions([

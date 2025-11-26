@@ -21,8 +21,8 @@
             </div>
 
             <div class="row mt-5">
-                {{-- @foreach ($clients as $client)
-                    <div class="col-lg-3 col-md-4 col-6 mb-4">
+                @foreach ($clients as $client)
+                    <div class="col-lg-3 col-md-4 col-6 mb-4 col-sm-6">
                         <div class="client-card p-3 shadow-sm text-center"
                             style="
                         border: 1px solid #eee;
@@ -30,12 +30,12 @@
                         transition: all .3s;
                         background: #fff;
                     ">
-                            <img src="{{ asset('uploads/clients/' . $client->logo) }}" alt="{{ $client->name }}"
+                            <img src="{{ $client->getFirstMediaUrl('clients') }}" alt="{{ $client->name }}"
                                 class="img-fluid"
-                                style="height: 80px; object-fit: contain; filter: grayscale(100%); transition: .3s;">
+                                style="height: 80px; object-fit: contain; transition: .3s;">
                         </div>
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
 
         </div>
