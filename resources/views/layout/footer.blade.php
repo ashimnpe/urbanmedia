@@ -106,6 +106,19 @@
 
 <script src="assets/js/main.js"></script>
 
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function() {
+        // Show loader
+        document.getElementById('loader').style.display = 'flex';
+
+        // Disable submit button to avoid double submit
+        const btn = this.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.innerText = "Sending...";
+    });
+</script>
+
+
 </body>
 
 </html>

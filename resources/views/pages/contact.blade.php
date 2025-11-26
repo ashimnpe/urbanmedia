@@ -30,6 +30,11 @@
             }
         }
     </style>
+
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
     <section id="contact" class="contact_area pt-70 pb-120">
         <div class="container contact-form-container">
 
@@ -107,5 +112,7 @@
         </div>
 
     </section>
+
+
 
 @endsection
