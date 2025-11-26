@@ -3,6 +3,25 @@
     $menuItems = MenuHelper::getMenuItems();
 @endphp
 
+<style>
+    .footer_content {
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .footer_content p {
+        margin: 8px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer_content i {
+        color: #fff;
+        font-size: 16px;
+    }
+</style>
 <footer id="footer" class="footer_area">
     <div class="container">
         <div class="footer_widget pt-70 pb-120">
@@ -14,9 +33,13 @@
                                     width="250px"></a>
                         </div>
                         <div class="footer_content">
-                            <p>We are a multidisciplinary media agency specializing in creative, digital, and print
-                                solutions that build memorable brand identities</p>
+                            <p><i class="lni lni-map-marker"></i> Kamaladi, Kathmandu, Nepal</p>
+                            <p><i class="lni lni-envelope"></i> <a class="text-white"
+                                    href="mailto:info@urbanmedia.com.np">info@urbanmedia.com.np</a></p>
+                            <p><i class="lni lni-phone"></i> <a class="text-white"
+                                    href="tel:+977-1-5356576">+977-1-5356576</a></p>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
