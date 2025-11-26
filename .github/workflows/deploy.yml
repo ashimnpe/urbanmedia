@@ -1,0 +1,66 @@
+name: 🚀 Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          cache: 'npm'
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom, filter, gd, iconv, json, mbstring, pdo
+          tools: composer:v2
+
+      # (Optional) If you need to build your project before deploying
+      - name: Install dependencies
+        run: |
+          npm install   # or composer install for Laravel
+          npm run build # or skip if not required
+
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Upload files to cPanel via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.CPANEL_HOST }}
+          username: ${{ secrets.CPANEL_USER }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}   # private key for SSH
+          port: 22
+          source: "./"
+          target: "/home3/${{ secrets.CPANEL_USER }}/urbanmedia/${{ github.ref_name }}"
+
+      - name: Run post-deploy commands on cPanel
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.CPANEL_HOST }}
+          username: ${{ secrets.CPANEL_USER }}
+          key: ${{ secrets.CPANEL_SSH_KEY }}
+          port: 22
+          script: |
+            cd /home3/${{ secrets.CPANEL_USER }}/urbanmedia/${{ github.ref_name }}
+            # Copy .env.example to .env if .env doesn't exist
+            [ ! -f .env ] && cp .env.example .env
+            # Set environment-specific variables
+            sed -i 's/APP_ENV=.*/APP_ENV=production/' .env
+            sed -i 's/APP_DEBUG=.*/APP_DEBUG=false/' .env
+            composer install --no-dev --optimize-autoloader || true
+            php artisan key:generate --force || true
+            php artisan migrate --force || true
+            php artisan config:clear || true
+            php artisan cache:clear || true
