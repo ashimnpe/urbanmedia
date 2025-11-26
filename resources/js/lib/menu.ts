@@ -6,6 +6,7 @@ export const footerNavItems: NavItem[] = [
         title: 'Trash',
         href: '/admin/trash',
         icon: Trash,
+        target: '_self'
     },
     {
         title: 'Website',

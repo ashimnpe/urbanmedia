@@ -5,10 +5,12 @@ namespace App\Providers;
 use App\Contracts\ClientInterface;
 use App\Contracts\ContactInterface;
 use App\Contracts\TestimonialInterface;
+use App\Contracts\TrashInterface;
 use App\Contracts\UserInterface;
 use App\Services\ClientService;
 use App\Services\ContactService;
 use App\Services\TestimonialService;
+use App\Services\TrashService;
 use App\Services\UserService;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ContactInterface::class, ContactService::class);
         $this->app->bind(UserInterface::class, UserService::class);
         $this->app->bind(TestimonialInterface::class, TestimonialService::class);
+        $this->app->bind(TrashInterface::class, TrashService::class);
     }
 
     /**
