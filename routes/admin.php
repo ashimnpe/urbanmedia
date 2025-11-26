@@ -57,9 +57,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         // Route::post('/portfolio/update/{id}', [PortfolioController::class, 'update'])->name('portfolio.update');
         // Route::delete('/portfolio/delete/{id}', [PortfolioController::class, 'destroy'])->name('portfolio.delete');
 
-        // // Contact
-        // Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
-        // Route::delete('/contacts/delete/{id}', [ContactController::class, 'destroy'])->name('contact.delete');
+        // Contact
+        Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
+        Route::delete('/contacts/delete/{id}', [ContactController::class, 'destroy'])->name('contact.delete');
 
         // // Trash
         // Route::get('/trash', [TrashController::class, 'index'])->name('trash.index');
