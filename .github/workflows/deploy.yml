@@ -43,7 +43,7 @@ jobs:
           key: ${{ secrets.CPANEL_SSH_KEY }}   # private key for SSH
           port: 22
           source: "./"
-          target: "/home3/${{ secrets.CPANEL_USER }}/urbanmedia/${{ github.ref_name }}"
+          target: "/home3/${{ secrets.CPANEL_USER }}/urbanmedia/"
 
       - name: Run post-deploy commands on cPanel
         uses: appleboy/ssh-action@v1.0.3
@@ -53,7 +53,7 @@ jobs:
           key: ${{ secrets.CPANEL_SSH_KEY }}
           port: 22
           script: |
-            cd /home3/${{ secrets.CPANEL_USER }}/urbanmedia/${{ github.ref_name }}
+            cd /home3/${{ secrets.CPANEL_USER }}/urbanmedia/
             # Copy .env.example to .env if .env doesn't exist
             [ ! -f .env ] && cp .env.example .env
             # Set environment-specific variables
